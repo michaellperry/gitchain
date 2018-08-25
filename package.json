@@ -1,0 +1,36 @@
+{
+  "name": "gitchain",
+  "version": "1.0.0",
+  "description": "Git as Blockchain",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaellperry/gitchain.git"
+  },
+  "keywords": [
+    "git",
+    "blockchain"
+  ],
+  "author": "Michael L Perry",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michaellperry/gitchain/issues"
+  },
+  "homepage": "https://github.com/michaellperry/gitchain#readme",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-typescript": "^5.0.0-alpha.1",
+    "source-map-support": "^0.5.6",
+    "ts-loader": "^4.4.1",
+    "typescript": "^2.9.1"
+  },
+  "dependencies": {
+    "simple-git": "^1.96.0"
+  }
+}
