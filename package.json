@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/michaellperry/gitchain#readme",
   "devDependencies": {
+    "@types/node": "^10.9.2",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-sourcemaps": "^2.6.4",
