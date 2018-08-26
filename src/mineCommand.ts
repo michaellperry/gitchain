@@ -26,11 +26,11 @@ function getMineParams(params: string[]): MineParams {
     }
 }
 
-export function mineCommand(params: string[]) {
+export async function mineCommand(params: string[]) {
     const mineParams = getMineParams(params);
     if (!mineParams.target) {
         throw 'Specify target:\n  mine -target n';
     }
 
-    mine(mineParams.target);
+    await mine(mineParams.target);
 }
