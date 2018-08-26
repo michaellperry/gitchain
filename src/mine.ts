@@ -5,10 +5,10 @@ export async function mine(target: number) {
 
     const repo = simpleGit();
     const status = await repo.status();
-    const staged = status.staged;
+    const files = [].concat(status.created, status.staged, status.deleted);
     const result = await repo.commit('message');
-    console.log(`Created commit ${result.commit}.`);
+    console.log(`Created commit ${result.commit} with ${files.length} files.`);
     await repo.reset(['HEAD~1']);
-    repo.add(staged);
+    await repo.add(files);
     console.log('Reset');
 }
