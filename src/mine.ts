@@ -8,7 +8,7 @@ export async function mine(target: number) {
     for (let attempt = 0; attempt < 10000; attempt++) {
         const message = generateRandomMessage();
         const sha = await commit(repo, message);
-        if (!matchesTarget(sha, target)) {
+        if (matchesTarget(sha, target)) {
             console.log(`Succeeded after ${attempt} ${attempt === 1 ? 'attempt' : 'attempts'}.`);
             return;
         }
@@ -43,5 +43,5 @@ async function commit(repo: simpleGit.SimpleGit, message: string) {
 
 function matchesTarget(sha: number, target: number) {
     const prefix = sha >> (28 - target);
-    return prefix > 0;
+    return prefix === 0;
 }
